@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bottom_navigation_view_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/my_purple"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:fontFamily="@font/montserratitalic"
+            app:bt_active="true"
+            app:bt_titleSize="@dimen/_13sdp"
+            app:bt_colorActive="@color/my_purple"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/radius_background"
+            android:backgroundTint="@color/white"
+            app:bt_title="Home" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_org"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:fontFamily="@font/montserratitalic"
+            app:bt_titleSize="@dimen/_13sdp"
+            app:bt_colorActive="@color/my_purple"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_chat"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/radius_background"
+            android:backgroundTint="@color/white"
+            app:bt_title="Groupes" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserratitalic"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            app:bt_titleSize="@dimen/_13sdp"
+            app:bt_colorActive="@color/my_purple"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_love"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/radius_background"
+            android:backgroundTint="@color/white"
+            app:bt_title="Favoris" />
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bu_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserratitalic"
+            app:bt_titleSize="@dimen/_13sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            app:bt_colorActive="@color/my_purple"
+            app:bt_colorInactive="@color/white"
+            app:bt_icon="@drawable/ic_profile"
+            app:bt_padding="@dimen/_8sdp"
+            app:bt_shape="@drawable/radius_background"
+            android:backgroundTint="@color/white"
+            app:bt_title="Profil" />
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+    <FrameLayout
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.fragments.HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view_linear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_45sdp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
